@@ -46,12 +46,15 @@ Console.WriteLine("Hello, World!");
 // AdoDotNet Read
 // CRUD
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
-// adoDotNetExample.Read();
-// adoDotNetExample.Create("Title", "Author", "Content");
-// adoDotNetExample.Update(11,"Title 1", "Author 1", "Content 1");
-// adoDotNetExample.Delete(11);
-// adoDotNetExample.Edit(102);
-adoDotNetExample.Edit(110);
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//// adoDotNetExample.Read();
+//// adoDotNetExample.Create("Title", "Author", "Content");
+//// adoDotNetExample.Update(11,"Title 1", "Author 1", "Content 1");
+//// adoDotNetExample.Delete(11);
+//// adoDotNetExample.Edit(102);
+//adoDotNetExample.Edit(110);
+
+DapperExample dapperExamle = new DapperExample();
+dapperExamle.Run();
 
 Console.ReadKey();
