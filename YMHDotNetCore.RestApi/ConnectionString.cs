@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YMHDotNetCore.ConsoleApp
+namespace YMHDotNetCore.RestApi
 {
     internal static class ConnectionString
     {
@@ -14,7 +14,8 @@ namespace YMHDotNetCore.ConsoleApp
             DataSource = "DESKTOP-QCNJ1G5", // server name
             InitialCatalog = "DotNetTrainingBatch4", // database name
             UserID = "sa",
-            Password = "sasa@123"
+            Password = "sasa@123",
+            TrustServerCertificate = true
         };
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Reflection.Metadata;
 using System.ComponentModel.DataAnnotations;
 
-namespace YMHDotNetCore.ConsoleApp
+namespace YMHDotNetCore.ConsoleApp.AdoDotNetExamples
 {
     internal class AdoDotNetExample
     {
@@ -132,15 +132,15 @@ namespace YMHDotNetCore.ConsoleApp
             sqlDataAdapter.Fill(dt);
 
             connecton.Close();
-            
-            if(dt.Rows.Count == 0)
+
+            if (dt.Rows.Count == 0)
             {
                 Console.WriteLine("No Data Found");
                 return;
             }
 
             DataRow dr = dt.Rows[0];
-            
+
             Console.WriteLine("Blog ID => " + dr["BlogId"]);
             Console.WriteLine("Blog Title => " + dr["BlogTItle"]);
             Console.WriteLine("Blog Author => " + dr["BlogAuthor"]);

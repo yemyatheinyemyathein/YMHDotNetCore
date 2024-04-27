@@ -6,8 +6,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YMHDotNetCore.ConsoleApp.Dtos;
+using YMHDotNetCore.ConsoleApp.Services;
 
-namespace YMHDotNetCore.ConsoleApp;
+namespace YMHDotNetCore.ConsoleApp.DapperExamples;
 
 internal class DapperExample
 {
@@ -25,7 +27,8 @@ internal class DapperExample
     {
 
         using IDbConnection db = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
-        List<BlogDto> lst = db.Query<BlogDto>("select * from tbl_Blog").ToList();
+        //List<BlogDto> lst = db.Query<BlogDto>("select * from tbl_Blog").ToList();
+        var lst = db.Query<BlogDto>("select * from tbl_Blog").ToList(); // var is more fast then upper line
 
         foreach (BlogDto item in lst)
         {
@@ -38,12 +41,12 @@ internal class DapperExample
     }
 
 
-    private void Edit (int id)
+    private void Edit(int id)
     {
         using IDbConnection db = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
         var item = db.Query<BlogDto>("select * from tbl_Blog where blogId = @BlogId", new BlogDto { BlogId = id }).FirstOrDefault();
 
-        if (item is null) 
+        if (item is null)
         {
             Console.WriteLine("No Data Found");
             return;
@@ -79,7 +82,7 @@ internal class DapperExample
         Console.WriteLine(message);
     }
 
-    private void Update (int id, string title, string author, string content)
+    private void Update(int id, string title, string author, string content)
     {
         var item = new BlogDto
         {
