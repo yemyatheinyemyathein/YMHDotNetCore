@@ -17,7 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YMHDotNetCore.Shared", "YMH
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YMHDotNetCore.RestApiWithNLayer", "YMHDotNetCore.RestApiWithNLayer\YMHDotNetCore.RestApiWithNLayer.csproj", "{E2A28912-E875-40D0-809D-198994169B79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YMHDotNetCore.ConsoleAppHttpClient", "YMHDotNetCore.ConsoleAppHttpClient\YMHDotNetCore.ConsoleAppHttpClient.csproj", "{16DE1BCE-8CD2-45EE-ABF5-6858B6C9B07E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YMHDotNetCore.ConsoleAppHttpClient", "YMHDotNetCore.ConsoleAppHttpClient\YMHDotNetCore.ConsoleAppHttpClient.csproj", "{16DE1BCE-8CD2-45EE-ABF5-6858B6C9B07E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YMHDotNetCore.ConsoleAppHttpClientExample", "YMHDotNetCore.ConsoleAppHttpClientExample\YMHDotNetCore.ConsoleAppHttpClientExample.csproj", "{43BC39F6-2678-4C5C-8F98-6F7C49472AF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YMHDotNetCore.ConsoleAppRestClientExample", "YMHDotNetCore.RestClientExample\YMHDotNetCore.ConsoleAppRestClientExample.csproj", "{99347C79-828F-442D-B42E-79DA271E216B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{16DE1BCE-8CD2-45EE-ABF5-6858B6C9B07E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16DE1BCE-8CD2-45EE-ABF5-6858B6C9B07E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16DE1BCE-8CD2-45EE-ABF5-6858B6C9B07E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43BC39F6-2678-4C5C-8F98-6F7C49472AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43BC39F6-2678-4C5C-8F98-6F7C49472AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43BC39F6-2678-4C5C-8F98-6F7C49472AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43BC39F6-2678-4C5C-8F98-6F7C49472AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99347C79-828F-442D-B42E-79DA271E216B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99347C79-828F-442D-B42E-79DA271E216B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99347C79-828F-442D-B42E-79DA271E216B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99347C79-828F-442D-B42E-79DA271E216B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
