@@ -37,6 +37,7 @@
             textTitle = new TextBox();
             textContent = new TextBox();
             button1 = new Button();
+            btnUpdate = new Button();
             SuspendLayout();
             // 
             // btnClick
@@ -87,10 +88,20 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += btnCancel_Click;
             // 
+            // btnUpdate
+            // 
+            btnUpdate.BackColor = Color.LightSeaGreen;
+            resources.ApplyResources(btnUpdate, "btnUpdate");
+            btnUpdate.ForeColor = Color.Transparent;
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnUpdate);
             Controls.Add(button1);
             Controls.Add(textContent);
             Controls.Add(textTitle);
@@ -114,5 +125,6 @@
         private TextBox textTitle;
         private TextBox textContent;
         private Button button1;
+        private Button btnUpdate;
     }
 }
