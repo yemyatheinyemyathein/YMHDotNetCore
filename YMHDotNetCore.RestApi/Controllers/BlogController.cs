@@ -11,11 +11,19 @@ namespace YMHDotNetCore.RestApi.Controllers
 
     public class BlogController : ControllerBase
     {
+        // with dependecies injection
         private readonly AppDbContext _context;
-        public BlogController()
+
+        public BlogController(AppDbContext appDbContext)
         {
-            _context = new AppDbContext();
+            _context = appDbContext;
         }
+
+        //private readonly AppDbContext _context;
+        //public BlogController()
+        //{
+        //    //_context = new AppDbContext();
+        //}
 
         [HttpGet]
         public IActionResult Read()

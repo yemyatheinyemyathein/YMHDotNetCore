@@ -8,12 +8,16 @@ using YMHDotNetCore.RestApi.Models;
 
 namespace YMHDotNetCore.RestApi.Db
 {
-    internal class AppDbContext : DbContext
+    public class AppDbContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AppDbContext(DbContextOptions options) : base(options)
         {
-            optionsBuilder.UseSqlServer(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
         }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
+        //}
         public DbSet<BlogModel> Blogs { get; set; }
     }
 }

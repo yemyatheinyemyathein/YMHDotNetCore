@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,17 @@ using YMHDotNetCore.ConsoleApp.Dtos;
 
 namespace YMHDotNetCore.ConsoleApp.EfCoreExamples
 {
-    internal class EfCoreExample
+    public class EfCoreExample
     {
-        private readonly AppDbContext db = new AppDbContext();
+        //private readonly AppDbContext db = new AppDbContext();
+
+        // with dependecy injection
+        private readonly AppDbContext db;
+
+        public EfCoreExample(AppDbContext db)
+        {
+            this.db = db;
+        }
 
         public void Run()
         {

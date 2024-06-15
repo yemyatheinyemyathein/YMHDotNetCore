@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 using System.Data;
 using System.Data.SqlClient;
 using YMHDotNetCore.RestApi.Models;
@@ -12,7 +13,15 @@ namespace YMHDotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogDapper2Controller : ControllerBase
     {
-        private readonly DapperService _dapperService = new DapperService(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
+        // with Dependecies injection
+        private readonly DapperService _dapperService;
+
+        public BlogDapper2Controller(DapperService dapperService)
+        {
+            _dapperService = dapperService;
+        }
+
+        //private readonly DapperService _dapperService = new DapperService(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
         [HttpGet]
         public IActionResult GetBlogs()
         {

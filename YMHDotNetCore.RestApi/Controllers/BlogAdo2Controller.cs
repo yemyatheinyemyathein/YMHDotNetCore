@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Data;
 using YMHDotNetCore.RestApi.Models;
 using YMHDotNetCore.Shared;
+using Microsoft.Identity.Client;
 
 namespace YMHDotNetCore.RestApi.Controllers
 {
@@ -11,7 +12,15 @@ namespace YMHDotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogAdo2Controller : ControllerBase
     {
-        private readonly AdoDotNetService _adoDotNetService = new AdoDotNetService(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
+        // with Dapendecies injection code 
+        private readonly AdoDotNetService _adoDotNetService;
+
+        public BlogAdo2Controller(AdoDotNetService adoDotNetService)
+        {
+            _adoDotNetService = adoDotNetService;
+        }
+
+        //private readonly AdoDotNetService _adoDotNetService = new AdoDotNetService(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
         [HttpGet]
         public IActionResult GetBlogs()
         {
