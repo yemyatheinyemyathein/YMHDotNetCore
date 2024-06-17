@@ -86,4 +86,4 @@ adoDotNetExample.Read();
 //var dapperExample = serviceProvider.GetRequiredService<DapperExample>();
 //dapperExample.Run();
 
-Console.ReadKey();
+Console.ReadKey(); 
