@@ -1,0 +1,18 @@
+﻿<h2>New Blogs</h2>
+
+<form action="/Blog/Save" method="post">
+    <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control" placeholder="Title" name="BlogTitle">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Author</label>
+        <input type="text" class="form-control" placeholder="Author" name="BlogAuthor">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Content</label>
+        <input type="text" class="form-control" placeholder="Content" name="BlogContent">
+    </div>
+    <a href="/Blog/Create" class="btn btn-danger">Back</a>
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
