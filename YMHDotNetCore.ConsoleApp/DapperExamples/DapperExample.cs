@@ -126,6 +126,4 @@ public class DapperExample
         string message = result > 0 ? "Deleting Successful" : "Deleting Failed";
         Console.WriteLine(message);
     }
-
-
 }

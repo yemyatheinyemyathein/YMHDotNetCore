@@ -1,0 +1,45 @@
+﻿<h2>New Blogs</h2>
+
+    <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control" id="BlogTitle" placeholder="Title" name="BlogTitle">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Author</label>
+    <input type="text" class="form-control" id="BlogAuthor" placeholder="Author" name="BlogAuthor">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Content</label>
+    <input type="text" class="form-control" id="BlogContent" placeholder="Content" name="BlogContent">
+    </div>
+    <a href="/Blog/Create" class="btn btn-danger">Back</a>
+    <button type="button" class="btn btn-success" id="btnSave">Save</button>
+    @section scripts {
+        <script>
+            $("#btnSave").click(function(){
+            let title = $("#BlogTitle").val();
+            let author = $("#BlogAuthor").val();
+            let content = $("#BlogContent").val();
+
+            let _reqModel = {
+                BlogTitle: title,
+                BlogAuthor: author,
+                BlogContent: content
+            }
+
+            $.ajax({
+                url: "/Blog/Save",
+                data: { blog: _reqModel },
+                type: "POST",
+                // contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    console.log("Ths is Json Data ", result);
+                },
+                error: function (errormessage) {
+                    console.log("This is Error",errormessage);
+                }
+            });
+            })
+        </script>
+    }

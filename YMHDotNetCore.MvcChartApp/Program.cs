@@ -1,18 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-using YMHDotNetCore.MVCApp.Db;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews().AddJsonOptions(opt =>
-{
-    opt.JsonSerializerOptions.PropertyNamingPolicy = null;
-});
+builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<AppDbContext>(opt =>
-{
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
-}, ServiceLifetime.Transient, ServiceLifetime.Transient);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

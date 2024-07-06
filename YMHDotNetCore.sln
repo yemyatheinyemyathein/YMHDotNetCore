@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YMHDotNetCore.NLayer.DataAc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YMHDotNetCore.MinimalApi", "YMHDotNetCore.MinimalApi\YMHDotNetCore.MinimalApi.csproj", "{4EA7B272-FACF-45CB-8C2A-4062D94896C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YMHDotNetCore.MVCApp", "YMHDotNetCore.MVCApp\YMHDotNetCore.MVCApp.csproj", "{3D30D2AB-0E3D-4620-8EFB-C1A423F10973}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YMHDotNetCore.MVCApp", "YMHDotNetCore.MVCApp\YMHDotNetCore.MVCApp.csproj", "{3D30D2AB-0E3D-4620-8EFB-C1A423F10973}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YMHDotNetCore.MvcChartApp", "YMHDotNetCore.MvcChartApp\YMHDotNetCore.MvcChartApp.csproj", "{F74D5BD5-193C-4A83-B509-537D7803F9D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,6 +98,10 @@ Global
 		{3D30D2AB-0E3D-4620-8EFB-C1A423F10973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D30D2AB-0E3D-4620-8EFB-C1A423F10973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D30D2AB-0E3D-4620-8EFB-C1A423F10973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F74D5BD5-193C-4A83-B509-537D7803F9D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F74D5BD5-193C-4A83-B509-537D7803F9D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F74D5BD5-193C-4A83-B509-537D7803F9D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F74D5BD5-193C-4A83-B509-537D7803F9D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
